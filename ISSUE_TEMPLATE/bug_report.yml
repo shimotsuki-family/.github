@@ -1,0 +1,38 @@
+name: 🐛 Bug Report
+description: バグ報告用のフォーム
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        バグの報告ありがとうございます！以下の項目を埋めていただけると助かります。
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 何が起きましたか？
+      description: 期待していた動作と、実際に起きた動作を説明してください。
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 再現手順
+      description: バグを再現するための手順を記載してください。
+      placeholder: |
+        1. '...' に行く
+        2. '....' をクリックする
+        3. エラーが出る
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 重要度
+      options:
+        - Critical (即時修正が必要)
+        - High (次のリリースで修正)
+        - Medium (修正が必要)
+        - Low (軽微)
+    validations:
+      required: true
